@@ -17,6 +17,6 @@
     {{ game.title }}
     {{ game.description }}
     {{ game.releasedate|date('d-m-Y')}}
-    {{ game.societyname }}
+    {{ game.editor.societyName }}
     {% endfor %}
     {% endblock %}

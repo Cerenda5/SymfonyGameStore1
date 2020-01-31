@@ -14,8 +14,9 @@ class HomeController extends AbstractController
     public function index(EntityManagerInterface $em)
     {
         $games = $em->getRepository('App:VideoGame')->findAll();
+
         return $this->render('home/index.html.twig', [
-            'games' => 'games',
+            'games' => $games,
         ]);
     }
 }
